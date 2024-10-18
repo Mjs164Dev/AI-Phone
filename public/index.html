@@ -1,0 +1,45 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Outbound Call Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 15px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Initiate Outbound Call</h1>
+  <form action="/call" method="POST">
+    <label for="name">Person's Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="phoneNumber">Phone Number to Call:</label><br>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+
+    <label for="topic">Topic to Discuss:</label><br>
+    <textarea id="topic" name="topic" rows="4" required></textarea><br>
+
+    <input type="submit" value="Initiate Call">
+  </form>
+</body>
+</html>
